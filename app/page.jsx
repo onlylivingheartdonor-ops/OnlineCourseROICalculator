@@ -98,8 +98,6 @@ const css = `
   }
 `
 
-import { RELATED_LINKS as RELATED } from "./lib/links"
-
 function fmt(n) { return "$" + Math.round(Math.abs(n)).toLocaleString("en-US") }
 function fmtSigned(n) { return (n >= 0 ? "+" : "−") + "$" + Math.round(Math.abs(n)).toLocaleString("en-US") }
 
