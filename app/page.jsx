@@ -211,7 +211,7 @@ export default function Page() {
           {c > 0 && inc > 0 && d > 0 && (
             <>
               {verdict && (
-                <div className={`roi-verdict ${verdict.key}`}>
+                <div className={"roi-verdict " + verdict.key}>
                   <p className="roi-verdict-title">{verdict.title}</p>
                   <p className="roi-verdict-sub">{verdict.msg}</p>
                 </div>
@@ -224,17 +224,17 @@ export default function Page() {
                 </div>
                 <div className="roi-result-cell">
                   <p className="roi-result-label">Net profit</p>
-                  <p className={`roi-result-val ${profit >= 0 ? "green" : "red"}`}>{fmtSigned(profit)}</p>
+                  <p className={"roi-result-val " + (profit >= 0 ? "green" : "red")}>{fmtSigned(profit)}</p>
                 </div>
                 <div className="roi-result-cell">
                   <p className="roi-result-label">ROI</p>
-                  <p className={`roi-result-val ${roi >= 100 ? "green" : roi >= 0 ? "amber" : "red"}`}>
+                  <p className={"roi-result-val " + (roi >= 100 ? "green" : roi >= 0 ? "amber" : "red")}>
                     {roi >= 0 ? "+" : ""}{roi.toFixed(0)}%
                   </p>
                 </div>
                 <div className="roi-result-cell">
                   <p className="roi-result-label">Payback period</p>
-                  <p className={`roi-result-val ${payback <= 12 ? "green" : payback <= 24 ? "amber" : "red"}`}>
+                  <p className={"roi-result-val " + (payback <= 12 ? "green" : payback <= 24 ? "amber" : "red")}>
                     {isFinite(payback) ? payback.toFixed(1) + " mo" : "∞"}
                   </p>
                 </div>
@@ -366,16 +366,16 @@ export default function Page() {
         {/* ========== MONEYWISE LINK — END ========== */}
 
         {/* RELATED */}
-        <div className="dr-card">
-          <p className="dr-section-title">Related tools</p>
-          <div className="dr-related-links">
+        <div className="roi-card">
+          <p className="roi-section-title">Related tools</p>
+          <div className="roi-related-links">
             {RELATED.map((r, i) => (
-              <a key={i} className="dr-related-link" href={r.href}>{r.label}</a>
+              <a key={i} className="roi-related-link" href={r.href}>{r.label}</a>
             ))}
           </div>
-          <div className="dr-disclaimer">
+          <div className="roi-disclaimer">
             This tool provides estimates for informational purposes only and does not constitute financial advice. Results assume a fixed interest rate and fixed monthly payment for the full repayment period. This site may use cookies and analytics. By using this site, you agree to our Privacy Policy and Terms of Service.
-            <div className="dr-footer-links">
+            <div className="roi-footer-links">
               <a href="/privacy">Privacy Policy</a>
               <a href="/terms">Terms of Service</a>
             </div>
