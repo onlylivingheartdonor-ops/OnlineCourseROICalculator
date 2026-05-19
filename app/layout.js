@@ -3,13 +3,13 @@ export const metadata = {
   description: "Estimate the return on investment (ROI) of an online course based on cost, time, and expected income increase.",
   
   alternates: {
-    canonical: "https:/https://www.onlinecourseroi.com",           // ← MUST CHANGE
+    canonical: "https://www.onlinecourseroi.com",           // ← MUST CHANGE
   },
 
   openGraph: {
     title: "Online Course ROI Calculator | Make Sure That Course is Worth the Cost",
     description: "Estimate the return on investment (ROI) of an online course based on cost, time, and expected income increase.",
-    url: "https:/www.onlinecourseroi.com",                 // ← MUST CHANGE
+    url: "https://www.onlinecourseroi.com",                 // ← MUST CHANGE
     siteName: "Moneywise Calculators",             // ← Change
     images: [
       {
