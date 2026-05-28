@@ -1,22 +1,22 @@
 export const metadata = {
-  title: "Online Course ROI Calculator | Make Sure That Course is Worth the Cost",
-  description: "Estimate the return on investment (ROI) of an online course based on cost, time, and expected income increase.",
-  
+  title: "Online Course ROI Calculator | Is That Course Worth the Cost?",
+  description: "Calculate the return on investment (ROI) of an online course based on cost, completion time, expected income increase, and how long the benefit lasts. See payback period and scenario analysis.",
+
   alternates: {
-    canonical: "https://www.onlinecourseroi.com",           // ← MUST CHANGE
+    canonical: "https://www.onlinecourseroi.com",
   },
 
   openGraph: {
-    title: "Online Course ROI Calculator | Make Sure That Course is Worth the Cost",
-    description: "Estimate the return on investment (ROI) of an online course based on cost, time, and expected income increase.",
-    url: "https://www.onlinecourseroi.com",                 // ← MUST CHANGE
-    siteName: "Moneywise Calculators",             // ← Change
+    title: "Online Course ROI Calculator | Is That Course Worth the Cost?",
+    description: "Calculate the return on investment (ROI) of an online course based on cost, completion time, expected income increase, and how long the benefit lasts.",
+    url: "https://www.onlinecourseroi.com",
+    siteName: "MoneyWise Calculators",
     images: [
       {
-        url: "https://www.onlinecourseroi.com/og-image.png", // ← MUST CHANGE
+        url: "https://www.onlinecourseroi.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Online Course ROI Calculator",
+        alt: "Online Course ROI Calculator — Is that course worth the cost?",
       },
     ],
     locale: "en_US",
@@ -25,8 +25,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Online Course ROI Calculator | Make Sure That Course is Worth the Cost",
-    description: "Estimate the return on investment (ROI) of an online course based on cost, time, and expected income increase.",
+    title: "Online Course ROI Calculator | Is That Course Worth the Cost?",
+    description: "Calculate the return on investment (ROI) of an online course based on cost, completion time, and expected income increase.",
   },
 
   robots: {
@@ -46,13 +46,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
-
-  authors: [{name: "David Graham" }],
+  authors: [{ name: "David Graham" }],
   creator: "MoneyWise Calculators",
   publisher: "MoneyWise Calculators",
 };
@@ -61,28 +55,37 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* AdSense */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3475627763908800"
           crossOrigin="anonymous"
         ></script>
-              <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "onlinecourseROIcalculator",
-              description: "Financial calculator tool",
-              url: "https://www.onlinecourseROIcalculator.com",
-              applicationCategory: "Finance",
+              name: "Online Course ROI Calculator",
+              description: "Free tool to calculate the return on investment (ROI) of an online course based on cost, completion time, expected income increase, and benefit duration.",
+              url: "https://www.onlinecourseroi.com",
+              applicationCategory: "FinanceApplication",
               operatingSystem: "All",
-              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }
+              browserRequirements: "Requires JavaScript",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD"
+              },
+              author: {
+                "@type": "Organization",
+                name: "MoneyWise Calculators",
+                url: "https://moneywisecalculator.com"
+              }
             }),
           }}
         />
-    </head>
+      </head>
       <body>{children}</body>
     </html>
   );
